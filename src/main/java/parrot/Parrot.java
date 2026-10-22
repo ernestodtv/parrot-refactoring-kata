@@ -7,7 +7,7 @@ public class Parrot {
     private final double voltage;
     private final boolean isNailed;
 
-    private Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
+    protected Parrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
         this.type = type;
         this.numberOfCoconuts = numberOfCoconuts;
         this.voltage = voltage;
@@ -15,6 +15,9 @@ public class Parrot {
     }
 
     public static Parrot createParrot(ParrotTypeEnum type, int numberOfCoconuts, double voltage, boolean isNailed) {
+        if (type == ParrotTypeEnum.EUROPEAN) {
+            return new EuropeanParrot();
+        }
         return new Parrot(type, numberOfCoconuts, voltage, isNailed);
     }
 
