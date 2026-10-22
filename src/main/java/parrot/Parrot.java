@@ -18,6 +18,9 @@ public class Parrot {
         if (type == ParrotTypeEnum.EUROPEAN) {
             return new EuropeanParrot();
         }
+        if (type == ParrotTypeEnum.AFRICAN) {
+            return new AfricanParrot(numberOfCoconuts);
+        }
         return new Parrot(type, numberOfCoconuts, voltage, isNailed);
     }
 
