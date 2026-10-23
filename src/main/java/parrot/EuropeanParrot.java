@@ -2,9 +2,7 @@ package parrot;
 
 public class EuropeanParrot extends Parrot {
 
-    EuropeanParrot() {
-        super(ParrotTypeEnum.EUROPEAN, 0, false);
-    }
+    EuropeanParrot() {}
 
     @Override
     public double getSpeed() {
